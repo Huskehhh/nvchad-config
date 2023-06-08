@@ -1,7 +1,7 @@
 FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm
-RUN pacman -S --noconfirm rustup gcc git neovim clang nodejs npm ripgrep
+RUN pacman -S --noconfirm rustup gcc git neovim clang nodejs npm ripgrep zip unzip
 RUN rustup self upgrade-data
 RUN rustup default nightly
 
