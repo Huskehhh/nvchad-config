@@ -7,7 +7,10 @@ local servers = { "html", "cssls", "tsserver", "clangd", "rust_analyzer", "pyrig
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
-    on_attach = on_attach,
+    on_attach = function(client, bufnr)
+      on_attach(client, bufnr)
+      require("inlay-hints").on_attach(client, bufnr)
+    end,
     capabilities = capabilities,
   }
 end
