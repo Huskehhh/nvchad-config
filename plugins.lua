@@ -62,34 +62,11 @@ local plugins = {
     },
     {
         "williamboman/mason.nvim",
-        opts = {
-            ensure_installed = { "clangd", "rust-analyzer",
-                "cpplint", "rustfmt", "black", "stylua", "cmake-language-server" },
-        },
+        opts = { ensure_installed = overrides.mason.ensure_installed },
     },
     {
         "nvim-treesitter/nvim-treesitter",
-        opts = {
-            ensure_installed = {
-                -- defaults
-                "vim",
-                "lua",
-
-                -- web dev
-                "html",
-                "css",
-                "javascript",
-                "typescript",
-                "tsx",
-                "json",
-
-                "c",
-                "cpp",
-                "zig",
-                "rust",
-                "python",
-            },
-        },
+        opts = { ensure_installed = overrides.treesitter.ensure_installed },
     },
 }
 
