@@ -1,8 +1,6 @@
 FROM alpine:edge
 
-RUN apk add --no-cache rustup gcc git neovim nodejs npm ripgrep zip unzip
-RUN rustup self upgrade-data
-RUN rustup default nightly
+RUN apk add --no-cache gcc git neovim nodejs npm ripgrep zip unzip
 
 WORKDIR /root
 
