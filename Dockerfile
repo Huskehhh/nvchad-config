@@ -1,7 +1,6 @@
-FROM archlinux:latest
+FROM alpine:edge
 
-RUN pacman -Syu --noconfirm
-RUN pacman -S --noconfirm rustup gcc git neovim clang nodejs npm ripgrep zip unzip
+RUN apk add --no-cache rustup gcc git neovim nodejs npm ripgrep zip unzip
 RUN rustup self upgrade-data
 RUN rustup default nightly
 
