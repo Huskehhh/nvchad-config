@@ -1,6 +1,7 @@
-FROM alpine:edge
+FROM archlinux:latest
 
-RUN apk add --no-cache gcc git neovim nodejs npm ripgrep zip unzip
+RUN pacman -Syu --noconfirm
+RUN pacman -S --noconfirm gcc git neovim nodejs npm ripgrep zip unzip
 
 WORKDIR /root
 
