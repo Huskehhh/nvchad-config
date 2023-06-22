@@ -27,14 +27,6 @@ local plugins = {
 	},
 
 	{
-		"j-hui/fidget.nvim",
-		config = function()
-			require("fidget").setup()
-		end,
-		lazy = false,
-	},
-
-	{
 		"ThePrimeagen/harpoon",
 		config = function()
 			require("custom.configs.harpoon")
