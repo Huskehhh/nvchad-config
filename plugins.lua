@@ -68,11 +68,11 @@ local plugins = {
 	},
 
 	{
-		"simrat39/inlay-hints.nvim",
-		config = function()
-			require("inlay-hints").setup()
-		end,
+		"lvimuser/lsp-inlayhints.nvim",
 		lazy = false,
+    config = function()
+			require("custom.configs.inlayhints")
+    end,
 	},
 }
 
