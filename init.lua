@@ -3,8 +3,8 @@ local opt = vim.opt
 
 -- Auto resize panes when resizing nvim window
 autocmd("VimResized", {
-  pattern = "*",
-  command = "tabdo wincmd =",
+	pattern = "*",
+	command = "tabdo wincmd =",
 })
 
 opt.nu = true
@@ -28,8 +28,8 @@ opt.colorcolumn = "80"
 
 -- Highlight on yank.
 autocmd("TextYankPost", {
-    desc = "highlight on yank",
-    callback = function()
-        vim.highlight.on_yank({ higroup = "IncSearch", timeout = "200" })
-    end,
+	desc = "highlight on yank",
+	callback = function()
+		vim.highlight.on_yank({ higroup = "IncSearch", timeout = "200" })
+	end,
 })

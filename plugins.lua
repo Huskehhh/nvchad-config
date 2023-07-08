@@ -70,9 +70,9 @@ local plugins = {
 	{
 		"lvimuser/lsp-inlayhints.nvim",
 		lazy = false,
-    config = function()
+		config = function()
 			require("custom.configs.inlayhints")
-    end,
+		end,
 	},
 }
 
