@@ -15,6 +15,7 @@ M.treesitter = {
 		"cpp",
 		"rust",
 		"python",
+		"svelte",
 	},
 	indent = {
 		enable = true,
